@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Golden Asia Mirco Finance</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+ <style>
+/* ─── Campaign Intro Banner ───────────────────────────────── */
+.campaign-intro { margin-bottom: 36px; }
+ 
+.campaign-intro-inner {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  border-radius: 20px;
+  padding: 44px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.campaign-intro-inner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), transparent 40%));
+}
+ 
+.campaign-intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  color: var(--accent-color);
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.campaign-intro-badge i { font-size: 12px; }
+ 
+.campaign-intro-title {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  margin-bottom: 16px;
+}
+ 
+.campaign-intro-text {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 15.5px;
+  line-height: 1.8;
+  max-width: 740px;
+  margin: 0 auto 22px;
+}
+ 
+.campaign-intro-text strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+ 
+.campaign-hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+ 
+.campaign-tag {
+  background: color-mix(in srgb, var(--default-color), transparent 93%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+ 
+.campaign-tag:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+ 
+/* ─── Round Indicators ────────────────────────────────────── */
+.campaign-rounds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+ 
+.campaign-round {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background: var(--surface-color);
+  transition: all 0.3s;
+}
+ 
+.campaign-round-done {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+.campaign-round-done .round-icon { color: var(--accent-color); }
+ 
+.campaign-round-active {
+  border-color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--accent-color), transparent 72%);
+}
+.campaign-round-active .round-icon { color: var(--accent-color); }
+ 
+.round-icon { font-size: 22px; }
+ 
+.round-info { display: flex; flex-direction: column; }
+.round-info strong {
+  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+.round-info span {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 12.5px;
+}
+ 
+.campaign-round-arrow {
+  color: color-mix(in srgb, var(--default-color), transparent 55%);
+  font-size: 20px;
+}
+ 
+/* ─── Gallery Grid ────────────────────────────────────────── */
+.campaign-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 280px 280px;
+  gap: 12px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+ 
+.cg-featured { grid-column: 1 / 3; }
+ 
+.cg-item { overflow: hidden; }
+ 
+.cg-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--surface-color);
+}
+ 
+.cg-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+ 
+.cg-wrap:hover img { transform: scale(1.07); }
+ 
+.cg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    color-mix(in srgb, var(--background-color), transparent 10%) 0%,
+    transparent 55%);
+  display: flex;
+  align-items: flex-end;
+  padding: 18px 20px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+ 
+.cg-wrap:hover .cg-overlay { opacity: 1; }
+ 
+.cg-overlay span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--contrast-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+.cg-overlay span i { color: var(--accent-color); font-size: 15px; }
+ 
+/* "View more" tile — always visible */
+.cg-overlay-more {
+  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  opacity: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+.cg-overlay-more i { color: var(--accent-color); font-size: 32px; }
+.cg-overlay-more span { justify-content: center; }
+ 
+/* ─── Impact Stats Strip ──────────────────────────────────── */
+.campaign-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 18px;
+  padding: 32px 24px;
+  margin-bottom: 50px;
+}
+ 
+.cstat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 36px;
+  flex: 1;
+  min-width: 160px;
+  justify-content: center;
+}
+ 
+.cstat-icon {
+  width: 52px;
+  height: 52px;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+.cstat-item:hover .cstat-icon {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: scale(1.08);
+}
+ 
+.cstat-body { display: flex; flex-direction: column; }
+.cstat-body strong {
+  color: var(--heading-color);
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+.cstat-body span {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 13px;
+}
+ 
+.cstat-sep {
+  width: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 88%);
+  align-self: stretch;
+  margin: 8px 0;
+}
+ 
+/* ─── Quote Banner ────────────────────────────────────────── */
+.campaign-quote-wrap {
+  text-align: center;
+  padding: 48px 40px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 72%);
+  border-radius: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.campaign-quote-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), transparent 50%));
+}
+ 
+.campaign-quote-icon {
+  color: var(--accent-color);
+  font-size: 48px;
+  opacity: 0.45;
+  display: block;
+  margin-bottom: 14px;
+}
+ 
+.campaign-quote-wrap blockquote {
+  font-size: clamp(17px, 2.2vw, 22px);
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  line-height: 1.7;
+  margin: 0 0 16px;
+  border: none;
+  padding: 0;
+  font-family: var(--heading-font);
+}
+ 
+.campaign-quote-wrap cite {
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+ 
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .campaign-intro-inner { padding: 32px 28px; }
+ 
+  .campaign-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 220px);
+  }
+  .cg-featured { grid-column: 1 / 3; }
+ 
+  .cstat-sep { display: none; }
+  .cstat-item {
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  .cstat-item:last-child { border-bottom: none; }
+}
+ 
+@media (max-width: 576px) {
+  .campaign-intro-inner { padding: 28px 20px; }
+ 
+  .campaign-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+  }
+  .cg-featured { grid-column: 1; }
+ 
+  .campaign-rounds { flex-direction: column; }
+  .campaign-round-arrow { transform: rotate(90deg); }
+ 
+  .campaign-quote-wrap { padding: 32px 20px; }
+  .cstat-item { min-width: 50%; }
+}
+</style>
+  <!-- =======================================================
+  * Template Name: Instant
+  * Template URL: https://bootstrapmade.com/newtemplate-bootstrap-website-template/
+  * Updated: Jul 07 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" alt="" />
+        <h1 class="sitename">Golden Asia</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Branches</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Kegalle </a></li>
+
+              <li><a href="#">Kurunagala </a></li>
+              <li><a href="#">Walapane</a></li>
+              <li><a href="#">Narammala</a></li>
+              <li><a href="#">Hatton</a></li>
+              <li><a href="#">Mathale</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!--<a class="btn-getstarted" href="index.html#about">Get Started</a>-->
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-main-content text-center">
+            <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="200">
+              Empowering Sri Lankans with<br />
+              <span class="typed" data-typed-items="Micro Credit Loans, Leasing Solutions, Financial Services"></span>
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+              Golden Asia is your trusted partner in micro credit loans,
+              leasing, and finance. With branches across Sri Lanka, we help
+              individuals and businesses achieve their goals through reliable
+              financial solutions.
+            </p>
+
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+              <a href="#" class="action-btn primary">
+                <span>Learn About Our Services</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="action-btn secondary glightbox">
+                <i class="bi bi-play-circle"></i>
+                <span>Watch Our Microfinance Overview</span>
+              </a>
+            </div>
+
+            <div class="hero-image-showcase" data-aos="fade-up" data-aos-delay="500">
+              <div class="image-wrapper">
+                <img src="assets/img/login1.jpg" class="img-fluid" alt="Microfinance Overview" />
+
+                <div class="floating-card card-1" data-aos="fade-right" data-aos-delay="600">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4>
+                        <span data-purecounter-start="0" data-purecounter-end="95" class="purecounter"></span>%
+                      </h4>
+                      <p>Loan Approval Rate</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="floating-card card-2" data-aos="fade-left" data-aos-delay="700">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4>
+                        <span data-purecounter-start="0" data-purecounter-end="1200" class="purecounter"></span>+
+                      </h4>
+                      <p>Happy Clients Served</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center justify-content-between g-lg-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="image-wrapper">
+              <img src="assets/img/about/about-portrait-7.webp" class="img-fluid rounded" alt="About Us Image" />
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <h2 class="mb-4">Our Story</h2>
+              <h5 class="mb-4">Empowering Communities Since 2010</h5>
+
+              <p>
+                Golden Asia Micro Credit Finance was founded with a vision to provide
+                accessible financial solutions to individuals and small businesses across
+                Sri Lanka. From humble beginnings, we have grown into a trusted financial
+                partner with multiple branches island-wide, offering micro credit loans,
+                leasing options, and personalized financial services.
+              </p>
+
+              <p>
+                In 2025, we proudly introduced our own <strong>Loan Management System</strong>,
+                a digital platform designed to simplify loan processing, improve
+                transparency, and support our clients with real-time financial insights.
+                This step reflects our commitment to innovation and community growth.
+              </p>
+
+              <div class="features-list mt-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-award"></i>
+                      <h5>Excellence</h5>
+                      <p>Delivering trustworthy and professional financial services.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-lightbulb"></i>
+                      <h5>Innovation</h5>
+                      <p>
+                        Leveraging modern technology like our Loan Management System to
+                        serve clients better.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-people"></i>
+                      <h5>Community</h5>
+                      <p>
+                        Supporting families, entrepreneurs, and communities across Sri
+                        Lanka.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-graph-up-arrow"></i>
+                      <h5>Growth</h5>
+                      <p>
+                        Helping clients achieve financial stability and sustainable
+                        development.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5" data-aos="fade-up" data-aos-delay="600">
+                <a href="#services" class="btn btn-primary me-3">Explore Our Services</a>
+                <a href="#contact" class="btn btn-outline-primary">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Features</h2>
+        <p>
+          Tailored services and solutions designed to support your financial growth
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+            <div class="intro-content">
+              <h2>Empowering You with Financial Solutions</h2>
+              <p>
+                We provide flexible loan options, fast approvals, secure transactions, and dedicated support to help you
+                achieve your goals.
+              </p>
+              <div class="feature-stats">
+                <div class="stat-item">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">Loans Processed</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Trusted & Secure</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">24/7</span>
+                  <span class="stat-label">Customer Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="intro-image">
+              <img src="assets/img/features/features-2.webp" alt="Features" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="250">
+            <div class="feature-number">01</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <h4>Flexible Loans</h4>
+              <p>
+                Micro, personal, and business loans with repayment plans tailored to your needs.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">Microfinance</span>
+                <span class="tag">Custom Plans</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="300">
+            <div class="feature-number">02</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h4>Secure Transactions</h4>
+              <p>
+                All transactions are encrypted and verified to ensure trust and reliability.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">Safe</span>
+                <span class="tag">Trusted</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="350">
+            <div class="feature-number">03</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <h4>Fast Approvals</h4>
+              <p>
+                Quick loan processing with minimal paperwork, ensuring funds are accessible when needed.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">Quick</span>
+                <span class="tag">Reliable</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="400">
+            <div class="feature-number">04</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4>Dedicated Support</h4>
+              <p>
+                Expert guidance and personalized support available 24/7 for all customers.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">24/7</span>
+                <span class="tag">Assistance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="450">
+            <div class="feature-number">05</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h4>Financial Insights</h4>
+              <p>
+                Access reports and insights to track loans, repayments, and financial growth effectively.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">Analytics</span>
+                <span class="tag">Reports</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="500">
+            <div class="feature-number">06</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-cloud-arrow-up"></i>
+              </div>
+              <h4>Digital Integration</h4>
+              <p>
+                Manage your loans, payments, and account online through our secure digital platform.
+              </p>
+              <div class="feature-tags">
+                <span class="tag">Online</span>
+                <span class="tag">Accessible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Features Section -->
+
+    <!-- Features Tabs Section -->
+    <section id="features-tabs" class="features-tabs section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="tabs-wrapper">
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-1">
+                <div class="tab-icon">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>Flexible Loans</h5>
+                  <span>Tailored for your needs</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-2">
+                <div class="tab-icon">
+                  <i class="bi bi-shield-lock"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>Secure Transactions</h5>
+                  <span>Safe & trusted</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-3">
+                <div class="tab-icon">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>Quick Processing</h5>
+                  <span>Fast approvals</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tabs-tab-4">
+                <div class="tab-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>Dedicated Support</h5>
+                  <span>Here when you need us</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+            <!-- Flexible Loans -->
+            <div class="tab-pane fade active show" id="features-tabs-tab-1">
+              <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h3>Flexible Loan Options</h3>
+                    <p>
+                      Offering micro, business, and personal loans with flexible repayment plans to suit every customer.
+                    </p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Short-term loans</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Long-term financing</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Minimal documentation</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Custom repayment schedules</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Loans Processed</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Experience</div>
+                      </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary">Apply Now <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-4.webp" alt="Loans" class="img-fluid" />
+                      <div class="floating-card">
+                        <i class="bi bi-wallet2"></i>
+                        <div class="card-content">
+                          <span>Fast Disbursement</span>
+                          <strong>Within 24 hours</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secure Transactions -->
+            <div class="tab-pane fade" id="features-tabs-tab-2">
+              <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>
+                      All financial transactions are protected with high-end security protocols ensuring trust and
+                      reliability.
+                    </p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Encrypted transactions</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Verified accounts</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Fraud detection systems</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Trusted partners</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">256-bit</div>
+                        <div class="stat-label">Encryption</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Protected</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Security Breaches</div>
+                      </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-2.webp" alt="Security" class="img-fluid" />
+                      <div class="floating-card">
+                        <i class="bi bi-shield-check"></i>
+                        <div class="card-content">
+                          <span>Trust</span>
+                          <strong>Guaranteed</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Processing -->
+            <div class="tab-pane fade" id="features-tabs-tab-3">
+              <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h3>Quick Loan Processing</h3>
+                    <p>
+                      Apply and get approvals fast with minimal paperwork, making funds accessible when you need them
+                      most.
+                    </p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Same-day approval</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Minimal documentation</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Flexible repayment options</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Transparent terms</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Approval Time</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Transparency</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Satisfied Clients</div>
+                      </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary">Apply Now <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-6.webp" alt="Processing" class="img-fluid" />
+                      <div class="floating-card">
+                        <i class="bi bi-clock-history"></i>
+                        <div class="card-content">
+                          <span>Speed</span>
+                          <strong>Fast & Reliable</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dedicated Support -->
+            <div class="tab-pane fade" id="features-tabs-tab-4">
+              <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div class="icon-badge">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h3>Dedicated Customer Support</h3>
+                    <p>
+                      Our team is always available to guide, assist, and answer any questions throughout your financial
+                      journey.
+                    </p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>24/7 availability</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Expert guidance</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Personalized assistance</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Quick responses</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">2min</div>
+                        <div class="stat-label">Average Response</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Resolved Queries</div>
+                      </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary">Contact Us <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <div class="main-image">
+                      <img src="assets/img/features/features-1.webp" alt="Support" class="img-fluid" />
+                      <div class="floating-card">
+                        <i class="bi bi-headset"></i>
+                        <div class="card-content">
+                          <span>Support</span>
+                          <strong>Always Available</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End tab content items -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Features Tabs Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>
+          Providing reliable financial solutions to help you grow and achieve your goals.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
+              <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
+                <i class="bi bi-star-fill"></i>
+                <span>WHAT WE OFFER</span>
+              </div>
+              <h2 class="section-heading mb-4">
+                Trusted Financial Services for Everyone
+              </h2>
+              <p class="section-description mb-4">
+                At Golden Asia Micro Finance, we provide fast, flexible, and secure financial solutions
+                including micro loans, business loans, and finance leasing, designed to support individuals
+                and businesses across Sri Lanka.
+              </p>
+              <a href="#contact" class="cta-button" data-aos="fade-right" data-aos-delay="200">
+                Apply for a Loan
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+              <img src="assets/img/services/services-1.webp" alt="Financial Services" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+        <div class="services-grid mt-5">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>01</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">Micro Loans</a>
+                  </h5>
+                  <p class="service-description">
+                    Quick and affordable micro loans to meet your short-term financial needs with minimal documentation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>02</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">Business Loans</a>
+                  </h5>
+                  <p class="service-description">
+                    Supporting entrepreneurs and businesses with tailored loan solutions for growth, expansion, and
+                    operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card">
+                <div class="card-number">
+                  <span>03</span>
+                </div>
+                <div class="card-content">
+                  <h5 class="service-title">
+                    <a href="#">Finance Leasing</a>
+                  </h5>
+                  <p class="service-description">
+                    Flexible finance leasing options for vehicles, equipment, and other business assets to help you
+                    operate efficiently.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Card -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
+
+          <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
+            <span class="badge text-uppercase mb-2">Apply Now!</span>
+            <h2>Empower Your Future with Golden Asia</h2>
+            <p class="my-4">
+              Golden Asia Micro Finance provides trusted micro loans, business loans,
+              and finance leasing solutions across Sri Lanka. Join thousands of satisfied
+              clients achieving their goals with reliable financial support.
+            </p>
+
+            <div class="features d-flex flex-wrap gap-3 mb-4">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Quick Loan Approval</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Flexible Repayment Plans</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Trusted Financial Support</span>
+              </div>
+            </div>
+
+            <div class="cta-buttons d-flex flex-wrap gap-3">
+              <a href="#contact" class="btn btn-primary">Apply for Loan</a>
+              <a href="#services" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+
+          <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
+            <img src="assets/img/misc/misc-5.webp" alt="Financial Services" class="img-fluid rounded-4" />
+            <div class="floating-card">
+              <div class="card-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div class="card-content">
+                <span class="stats-number">10+</span>
+                <span class="stats-text">Years of Service</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="decoration">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- /Call To Action Section -->
+<!--<section id="campaign" class="campaign section">-->
+ 
+<!--  <div class="container" data-aos="fade-up">-->
+ 
+    <!-- Section Title — matches your .section-title pattern -->
+<!--    <div class="section-title" data-aos="fade-up">-->
+<!--      <h2>Our Community Relief</h2>-->
+<!--      <p>Beyond finance — standing with Sri Lankans when it matters most</p>-->
+<!--    </div>-->
+ 
+    <!-- Campaign Intro Banner -->
+<!--    <div class="campaign-intro" data-aos="fade-up" data-aos-delay="100">-->
+<!--      <div class="campaign-intro-inner">-->
+<!--        <div class="campaign-intro-badge">-->
+<!--          <i class="bi bi-heart-fill"></i>-->
+<!--          <span>Cyclone Relief Initiative</span>-->
+<!--        </div>-->
+<!--        <h3 class="campaign-intro-title">Empowering Futures. Rebuilding Lives.</h3>-->
+<!--        <p class="campaign-intro-text">-->
+<!--          As part of our <strong>second round of support</strong>, Golden Asia Investment proudly extended help by-->
+<!--          distributing school equipment and essential items to families affected by the recent cyclone.-->
+<!--          Following the disaster affecting our customers in <strong>Welimada, Mandaram Nuwara</strong> and-->
+<!--          <strong>Rikillgaskada</strong>, we organised a relief program to provide essential goods and school items-->
+<!--          for children in need.-->
+<!--        </p>-->
+<!--        <div class="campaign-hashtags">-->
+<!--          <span class="campaign-tag">#GoldenAsiaInvestment</span>-->
+<!--          <span class="campaign-tag">#StrongerTogether</span>-->
+<!--          <span class="campaign-tag">#CommunityFirst</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+ 
+    <!-- Round Indicators -->
+<!--    <div class="campaign-rounds" data-aos="fade-up" data-aos-delay="150">-->
+<!--      <div class="campaign-round campaign-round-done">-->
+<!--        <div class="round-icon"><i class="bi bi-check-circle-fill"></i></div>-->
+<!--        <div class="round-info">-->
+<!--          <strong>Round 1</strong>-->
+<!--          <span>Emergency Relief Distribution</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="campaign-round-arrow"><i class="bi bi-arrow-right"></i></div>-->
+<!--      <div class="campaign-round campaign-round-active">-->
+<!--        <div class="round-icon"><i class="bi bi-star-fill"></i></div>-->
+<!--        <div class="round-info">-->
+<!--          <strong>Round 2</strong>-->
+<!--          <span>School Supplies &amp; Essentials</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+ 
+    <!-- Photo Gallery Grid -->
+<!--    <div class="campaign-gallery" data-aos="fade-up" data-aos-delay="200">-->
+ 
+      <!-- Slot 1: Featured wide (spans 2 cols) -->
+<!--      <div class="cg-item cg-featured">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-1.jpg" alt="Relief distribution — Welimada" loading="lazy" />-->
+<!--          <div class="cg-overlay">-->
+<!--            <span><i class="bi bi-geo-alt-fill"></i> Welimada — Round 1</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+      <!-- Slot 2 -->
+<!--      <div class="cg-item">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-2.jpg" alt="School supplies handed out" loading="lazy" />-->
+<!--          <div class="cg-overlay">-->
+<!--            <span><i class="bi bi-book-fill"></i> School Supplies</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+      <!-- Slot 3 -->
+<!--      <div class="cg-item">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-3.jpg" alt="Essential goods distributed" loading="lazy" />-->
+<!--          <div class="cg-overlay">-->
+<!--            <span><i class="bi bi-box-seam-fill"></i> Essential Goods</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+      <!-- Slot 4 -->
+<!--      <div class="cg-item">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-4.jpg" alt="Mandaram Nuwara community support" loading="lazy" />-->
+<!--          <div class="cg-overlay">-->
+<!--            <span><i class="bi bi-geo-alt-fill"></i> Mandaram Nuwara</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+      <!-- Slot 5 -->
+<!--      <div class="cg-item">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-5.jpg" alt="Rikillgaskada support program" loading="lazy" />-->
+<!--          <div class="cg-overlay">-->
+<!--            <span><i class="bi bi-people-fill"></i> Rikillgaskada</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+      <!-- Slot 6: "View more" tile -->
+<!--      <div class="cg-item cg-more">-->
+<!--        <div class="cg-wrap">-->
+<!--          <img src="assets/img/campaign/campaign-6.jpg" alt="More campaign photos" loading="lazy" />-->
+<!--          <div class="cg-overlay cg-overlay-more">-->
+<!--            <i class="bi bi-images"></i>-->
+<!--            <span>View Full Album</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+ 
+<!--    </div>-->
+    <!-- /Gallery -->
+ 
+   
+
+ 
+<!--  </div>-->
+<!--</section>-->
+   
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="avatars d-flex align-items-center">
+              <img src="assets/img/person/person-m-2.webp" alt="Avatar 1" class="rounded-circle" loading="lazy" />
+              <img src="assets/img/person/person-m-3.webp" alt="Avatar 2" class="rounded-circle" loading="lazy" />
+              <img src="assets/img/person/person-f-5.webp" alt="Avatar 3" class="rounded-circle" loading="lazy" />
+              <img src="assets/img/person/person-m-5.webp" alt="Avatar 4" class="rounded-circle" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row counters">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <h2>
+                  <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1"
+                    class="purecounter"></span>+
+                </h2>
+                <p>Happy Clients</p>
+              </div>
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <h2>
+                  <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1"
+                    class="purecounter"></span>+
+                </h2>
+                <p>Business Loans Granted</p>
+              </div>
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                <h2>
+                  <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1"
+                    class="purecounter"></span>+
+                </h2>
+                <p>Finance Leasing Projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Stats Section -->
+
+
+    <!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-8">
+            <div class="faq-list">
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="100">
+                <h3>What types of loans do you provide?</h3>
+                <div class="faq-content">
+                  <p>
+                    We provide <strong>daily loans</strong>, <strong>business loans</strong>, and <strong>finance
+                      leasing</strong> solutions to meet both personal and business needs.
+                    Each loan package is tailored with flexible repayment options to suit your requirements.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div>
+              <!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>How can I apply for a loan?</h3>
+                <div class="faq-content">
+                  <p>
+                    You can apply by visiting our office at <strong>Annasigala, Molagoda, Kegalle</strong>,
+                    or contact us through phone/email. Our team will guide you through the application process
+                    and required documentation.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div>
+              <!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <h3>What documents are required?</h3>
+                <div class="faq-content">
+                  <p>
+                    Typically, you’ll need a valid NIC, proof of address (utility bill or similar),
+                    and proof of income (salary slip or business records). Additional documents may be
+                    required based on the type of loan.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div>
+              <!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <h3>How soon can I get my loan approved?</h3>
+                <div class="faq-content">
+                  <p>
+                    Loan approval times vary depending on the loan type and documents provided.
+                    In most cases, approvals are completed within <strong>24 to 48 hours</strong>.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div>
+              <!-- End FAQ Item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <h3>Do you offer flexible repayment options?</h3>
+                <div class="faq-content">
+                  <p>
+                    Yes, we provide flexible repayment schedules such as daily, weekly, or monthly plans,
+                    depending on your income and financial situation.
+                  </p>
+                </div>
+                <i class="bi bi-plus faq-toggle"></i>
+              </div>
+              <!-- End FAQ Item-->
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-card">
+              <i class="bi bi-chat-dots-fill"></i>
+              <h3>Can't find the answer to your question?</h3>
+              <p>
+                Our support team is here to help. If your question isn’t listed here, feel free to
+                contact us directly via phone, email, or our online form. We’ll be glad to guide you.
+              </p>
+              <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Faq Section -->
+
+    <!-- Team Section -->
+    <!--<section id="team" class="team section">-->
+    <!--  <div class="container" data-aos="fade-up" data-aos-delay="100">-->
+    <!--    <div class="team-header" data-aos="fade-up" data-aos-delay="200">-->
+    <!--      <div class="row align-items-center">-->
+    <!--        <div class="col-lg-6">-->
+    <!--          <h2>Our Professional Team</h2>-->
+    <!--          <p>-->
+    <!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut-->
+    <!--            elit tellus luctus nec ullamcorper mattis pulvinar dapibus-->
+    <!--            leo.-->
+    <!--          </p>-->
+    <!--        </div>-->
+    <!--        <div class="col-lg-6 d-flex justify-content-lg-end">-->
+    <!--          <div class="team-controls">-->
+    <!--            <button class="team-control-btn team-prev">-->
+    <!--              <i class="bi bi-chevron-left"></i>-->
+    <!--            </button>-->
+    <!--            <button class="team-control-btn team-next">-->
+    <!--              <i class="bi bi-chevron-right"></i>-->
+    <!--            </button>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <!--    <div class="team-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="300">-->
+    <!--      <script type="application/json" class="swiper-config">-->
+    <!--          {-->
+    <!--            "loop": true,-->
+    <!--            "speed": 700,-->
+    <!--            "autoplay": {-->
+    <!--              "delay": 5000-->
+    <!--            },-->
+    <!--            "slidesPerView": 1,-->
+    <!--            "spaceBetween": 30,-->
+    <!--            "navigation": {-->
+    <!--              "nextEl": ".team-next",-->
+    <!--              "prevEl": ".team-prev"-->
+    <!--            },-->
+    <!--            "breakpoints": {-->
+    <!--              "576": {-->
+    <!--                "slidesPerView": 2,-->
+    <!--                "spaceBetween": 20-->
+    <!--              },-->
+    <!--              "992": {-->
+    <!--                "slidesPerView": 3,-->
+    <!--                "spaceBetween": 30-->
+    <!--              },-->
+    <!--              "1200": {-->
+    <!--                "slidesPerView": 4,-->
+    <!--                "spaceBetween": 30-->
+    <!--              }-->
+    <!--            }-->
+    <!--          }-->
+    <!--        </script>-->
+    <!--      <div class="swiper-wrapper">-->
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-m-3.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Marcus Wilson</h3>-->
+    <!--              <span>Chief Technology Officer</span>-->
+    <!--              <p>-->
+    <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+    <!--                Ut elit tellus, luctus nec.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-f-5.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Sophia Reynolds</h3>-->
+    <!--              <span>Product Designer</span>-->
+    <!--              <p>-->
+    <!--                Duis aute irure dolor in reprehenderit in voluptate velit-->
+    <!--                esse cillum dolore eu fugiat.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-m-8.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Daniel Chen</h3>-->
+    <!--              <span>Marketing Specialist</span>-->
+    <!--              <p>-->
+    <!--                Excepteur sint occaecat cupidatat non proident, sunt in-->
+    <!--                culpa qui officia deserunt.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-f-9.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Olivia Thompson</h3>-->
+    <!--              <span>Lead Developer</span>-->
+    <!--              <p>-->
+    <!--                Sed ut perspiciatis unde omnis iste natus error sit-->
+    <!--                voluptatem accusantium doloremque.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Jason Parker</h3>-->
+    <!--              <span>UI/UX Designer</span>-->
+    <!--              <p>-->
+    <!--                Nemo enim ipsam voluptatem quia voluptas sit aspernatur-->
+    <!--                aut odit aut fugit, sed quia.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+
+    <!--        <div class="swiper-slide">-->
+    <!--          <div class="team-member">-->
+    <!--            <div class="member-image">-->
+    <!--              <img src="assets/img/person/person-f-7.webp" class="img-fluid" alt="" loading="lazy" />-->
+    <!--              <div class="member-social">-->
+    <!--                <a href="#"><i class="bi bi-twitter-x"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-facebook"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-instagram"></i></a>-->
+    <!--                <a href="#"><i class="bi bi-linkedin"></i></a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--            <div class="member-content">-->
+    <!--              <h3>Emily Rodriguez</h3>-->
+    <!--              <span>Project Manager</span>-->
+    <!--              <p>-->
+    <!--                At vero eos et accusamus et iusto odio dignissimos ducimus-->
+    <!--                qui blanditiis praesentium.-->
+    <!--              </p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+            <!-- End slide item -->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</section>-->
+    <!-- /Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          Get in touch with <strong>Golden Asia Pvt Ltd</strong>.
+          Whether you have questions about our loan services, business financing, or leasing options,
+          we’re here to help you every step of the way.
+        </p>
+      </div>
+
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-info-section">
+              <div class="info-header">
+                <h3>Connect With Us</h3>
+                <p>
+                  We’re here to assist you with inquiries, partnerships, or support.
+                  Reach out through any of the channels below and our team will be happy to help.
+                </p>
+              </div>
+
+              <div class="contact-info-grid">
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="250">
+                  <div class="info-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>Visit Our Office</h5>
+                    <p>Annasigala, Molagoda, Kegalle</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="info-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>Send Email</h5>
+                    <p><a href="mailto:info@goldenasia.lk">info@goldenasia.lk</a></p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="info-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>Call Direct</h5>
+                    <p><a href="tel:+94352221234">+94 35 222 1234</a></p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="info-icon">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h5>Business Hours</h5>
+                    <p>Mon – Sat: 8AM – 7PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-contact" data-aos="fade-up" data-aos-delay="450">
+                <h5>Follow Our Journey</h5>
+                <div class="social-icons">
+                  <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="contact-form-wrapper">
+              <div class="form-header">
+                <h3>Send Us a Message</h3>
+                <p>
+                  Have a question about our Day Loans, Business Loans, or Finance Leasing services?
+                  Fill out the form below and our team at Golden Asia Micro Finance will get back
+                  to you as soon as possible.
+                </p>
+              </div>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">Full Name</label>
+                  <input type="text" name="name" class="form-control" id="contactName"
+                    placeholder="Enter your full name" required />
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" name="email" id="contactEmail"
+                    placeholder="Enter your email address" required />
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactPhone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" name="phone" id="contactPhone"
+                    placeholder="Enter your phone number" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="contactSubject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="contactSubject"
+                    placeholder="Enter message subject" required />
+                </div>
+
+                <div class="mb-4">
+                  <label for="contactMessage" class="form-label">Your Message</label>
+                  <textarea class="form-control message-textarea" name="message" id="contactMessage" rows="5"
+                    placeholder="Enter your message here..." required></textarea>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you for contacting Golden Asia Micro Finance!
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>Send Message</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Golden Asia Micro Finance</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Golden Asia Pvt Ltd</p>
+              <p>Annasigala, Molagoda, Kegalle</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+94 35 222 1234</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@goldenasia.lk</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Day Loans</a></li>
+              <li><a href="#">Business Loans</a></li>
+              <li><a href="#">Finance Leasing</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Branches</h4>
+            <ul>
+              <li><a href="#">Kegalle</a></li>
+              <li><a href="#">Kurunegala</a></li>
+              <li><a href="#">Walapane</a></li>
+              <li><a href="#">Narammala</a></li>
+              <li><a href="#">Hatton</a></li>
+              <li><a href="#">Matale</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Connect With Us</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+              <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+              <li><a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright <strong><span>goldenasia.lk</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed & Developed by Golden Asia IT Solutions
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
