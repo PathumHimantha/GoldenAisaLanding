@@ -40,21 +40,15 @@ jobs:
           chmod 600 ~/.ssh/known_hosts
 
       - name: Upload archive to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: 57.128.195.112
-          username: ubuntu
-          key_path: ~/.ssh/id_rsa
-          source: deploy.tar.gz
-          target: /tmp
+        shell: bash
+        run: |
+          echo "Uploading archive to server..."
+          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=accept-new deploy.tar.gz ubuntu@57.128.195.112:/tmp/deploy.tar.gz
 
       - name: Extract and deploy on server
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: 57.128.195.112
-          username: ubuntu
-          key_path: ~/.ssh/id_rsa
-          script: |
+        shell: bash
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=accept-new ubuntu@57.128.195.112 '
             set -e
             echo "🚀 Deploying frontend files..."
             sudo mkdir -p /var/www/company-site
@@ -63,3 +57,4 @@ jobs:
             sudo rm -f /tmp/deploy.tar.gz
             sudo chown -R www-data:www-data /var/www/company-site 2>/dev/null || true
             echo "✅ Frontend deployed successfully"
+          '
