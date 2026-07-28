@@ -15,8 +15,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create deployment archive
+        shell: bash
         run: |
-          tar -czf deploy.tar.gz --exclude=.git --exclude=.github .
+          rm -rf .deploy-staging
+          mkdir -p .deploy-staging
+          rsync -a --delete --exclude .git --exclude .github ./ .deploy-staging/
+          tar -czf deploy.tar.gz -C .deploy-staging .
 
       - name: Validate SSH secret
         shell: bash
