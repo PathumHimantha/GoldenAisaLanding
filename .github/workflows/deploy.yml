@@ -1,0 +1,44 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create deployment archive
+        run: |
+          tar -czf deploy.tar.gz --exclude=.git --exclude=.github .
+
+      - name: Upload archive to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 57.128.195.112
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          source: deploy.tar.gz
+          target: /tmp
+
+      - name: Extract and deploy on server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 57.128.195.112
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            set -e
+            echo "🚀 Deploying frontend files..."
+            sudo mkdir -p /var/www/company-site
+            sudo rm -rf /var/www/company-site/* /var/www/company-site/.[!.]* /var/www/company-site/..?* 2>/dev/null || true
+            sudo tar -xzf /tmp/deploy.tar.gz -C /var/www/company-site
+            sudo rm -f /tmp/deploy.tar.gz
+            sudo chown -R www-data:www-data /var/www/company-site 2>/dev/null || true
+            echo "✅ Frontend deployed successfully"
